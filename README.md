@@ -1,4 +1,4 @@
-# World Bank Data Dashboard
+# The World Bank Data Dashboard
 
 An interactive, responsive dashboard that visualizes development indicators from the **World Bank Indicators API v2**. Built with Next.js 15 (App Router), TypeScript, Recharts, and shadcn/ui.
 
@@ -6,7 +6,7 @@ An interactive, responsive dashboard that visualizes development indicators from
 
 ## Live Demo
 
-Deploy to Vercel with a single click — no environment variables or API keys required.
+Deploy to [Vercel](https://theworldbankdashboard.vercel.app/) with a single click — no environment variables or API keys required.
 
 ---
 
@@ -99,6 +99,27 @@ No API key or authentication is required.
 https://api.worldbank.org/v2/country/US;DE;CN/indicator/NY.GDP.PCAP.CD?date=2015:2023&format=json
 ```
 
+---
+
+## Testing
+
+The project includes unit tests for the API service layer using **Jest**.
+
+### Run Tests
+
+To execute the unit tests, run:
+
+```bash
+npm test
+```
+
+The tests cover:
+- Fetching indicator data for a single country.
+- Fetching indicator data for multiple countries.
+- API response parsing and formatting.
+
+Test files are located in `lib/__tests__/`.
+
 ### Response Shape
 
 ```json
@@ -137,30 +158,20 @@ https://api.worldbank.org/v2/country/US;DE;CN/indicator/NY.GDP.PCAP.CD?date=2015
 ### Prerequisites
 
 - Node.js 18+
-- pnpm (recommended)
+- npm (recommended)
 
 ### Installation
+Clone the repository
 
 ```bash
-# Clone the repository
-git clone <your-repo-url>
-cd world-bank-dashboard
-
 # Install dependencies
-pnpm install
+npm install
 
 # Run the development server
-pnpm dev
+npm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Build for Production
-
-```bash
-pnpm build
-pnpm start
-```
 
 ---
 
@@ -190,29 +201,6 @@ Each chart component independently handles `isLoading` / `error` / `empty` state
 
 ---
 
-## Browser Support
-
-Tested and supported in:
-- Google Chrome (latest)
-- Mozilla Firefox (latest)
-- Apple Safari (latest)
-- Microsoft Edge (latest)
-
----
-
-## License
-
-MIT — free to use, modify, and distribute.
-
----
-
-## Acknowledgements
-
-- [World Bank Open Data](https://data.worldbank.org) for providing free access to development indicators
-- [Recharts](https://recharts.org) for the chart library
-- [shadcn/ui](https://ui.shadcn.com) for accessible UI components
-
----
 
 ## Images
 ![Full Capture](./public/fullcapture.png)
